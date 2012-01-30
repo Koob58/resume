@@ -47,6 +47,12 @@ var _gaq = [['_setAccount', 'UA-2029229-5'], ['_trackPageview']];
       var left = getOffset(emEls[i], 'left'),
           top = getOffset(emEls[i], 'top'),
           clone = emEls[i].cloneNode(true);
+
+      // sankho
+      if (left > 0) {
+        left = 8;
+      }
+
       setElStyles(clone, {
         position: 'absolute',
         left: left + 'px',
@@ -69,8 +75,9 @@ var _gaq = [['_setAccount', 'UA-2029229-5'], ['_trackPageview']];
   }
   
   function centerElementAt(element, top) {
-    element.style.left = '50%';
-    element.style.marginLeft = -(element.offsetWidth / 2) + 'px';
+    // sankho
+    //element.style.left = '50%';
+    //element.style.marginLeft = -(element.offsetWidth / 2) + 'px';
     emile(element, 'top:' + top + 'px', { duration: 500 });
   }
   
